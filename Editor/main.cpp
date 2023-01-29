@@ -6,10 +6,17 @@
 #include "../libs/cereal/archives/binary.hpp"
 #include "../libs/cereal/types/vector.hpp"
 #include "../libs/cereal/types/memory.hpp"
+#include "../libs/pge/olcPGE.hpp"
 #include "../source/component.hpp"
+#include "../source/core.hpp"
 
 int main()
 {
+    pgeEditor edit;
+    if (edit.Construct(256, 240, 4, 4)) edit.Start();
+
+    return 0;
+    /*
     {
     std::cout << "How many nodes?: ";
     int nodes;
@@ -34,5 +41,5 @@ int main()
     outb(tree);
 
     }
-    return 0;
+    */
 }
